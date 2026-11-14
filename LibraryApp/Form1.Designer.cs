@@ -46,20 +46,20 @@
             btnAddAuth = new Button();
             listBoxAuth = new ListBox();
             groupBox2 = new GroupBox();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            btnDelBook = new Button();
+            btnAddBook = new Button();
+            checkIsAval = new CheckBox();
+            txtPages = new TextBox();
+            txtPublishYear = new TextBox();
+            txtTitle = new TextBox();
             listBoxBook = new ListBox();
             label2 = new Label();
             label1 = new Label();
             comboBoxAuthors = new ComboBox();
             comboBoxGenres = new ComboBox();
-            txtTitle = new TextBox();
-            txtPublishYear = new TextBox();
-            txtPages = new TextBox();
-            checkIsAval = new CheckBox();
-            btnAddBook = new Button();
-            btnDelBook = new Button();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
             Genre.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -240,6 +240,84 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Book";
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(338, 240);
+            label9.Name = "label9";
+            label9.Size = new Size(47, 20);
+            label9.TabIndex = 14;
+            label9.Text = "Pages";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(339, 183);
+            label8.Name = "label8";
+            label8.Size = new Size(88, 20);
+            label8.TabIndex = 13;
+            label8.Text = "Publish year";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(338, 124);
+            label7.Name = "label7";
+            label7.Size = new Size(38, 20);
+            label7.TabIndex = 12;
+            label7.Text = "Title";
+            // 
+            // btnDelBook
+            // 
+            btnDelBook.Location = new Point(442, 355);
+            btnDelBook.Name = "btnDelBook";
+            btnDelBook.Size = new Size(73, 34);
+            btnDelBook.TabIndex = 11;
+            btnDelBook.Text = "Delete";
+            btnDelBook.UseVisualStyleBackColor = true;
+            btnDelBook.Click += btnDelBook_Click;
+            // 
+            // btnAddBook
+            // 
+            btnAddBook.Location = new Point(335, 355);
+            btnAddBook.Name = "btnAddBook";
+            btnAddBook.Size = new Size(73, 34);
+            btnAddBook.TabIndex = 9;
+            btnAddBook.Text = "Add";
+            btnAddBook.UseVisualStyleBackColor = true;
+            btnAddBook.Click += btnAddBook_Click;
+            // 
+            // checkIsAval
+            // 
+            checkIsAval.AutoSize = true;
+            checkIsAval.Location = new Point(338, 299);
+            checkIsAval.Name = "checkIsAval";
+            checkIsAval.Size = new Size(112, 24);
+            checkIsAval.TabIndex = 8;
+            checkIsAval.Text = "Is available?";
+            checkIsAval.UseVisualStyleBackColor = true;
+            // 
+            // txtPages
+            // 
+            txtPages.Location = new Point(335, 266);
+            txtPages.Name = "txtPages";
+            txtPages.Size = new Size(176, 27);
+            txtPages.TabIndex = 7;
+            // 
+            // txtPublishYear
+            // 
+            txtPublishYear.Location = new Point(335, 210);
+            txtPublishYear.Name = "txtPublishYear";
+            txtPublishYear.Size = new Size(176, 27);
+            txtPublishYear.TabIndex = 6;
+            // 
+            // txtTitle
+            // 
+            txtTitle.Location = new Point(335, 147);
+            txtTitle.Name = "txtTitle";
+            txtTitle.Size = new Size(176, 27);
+            txtTitle.TabIndex = 5;
+            // 
             // listBoxBook
             // 
             listBoxBook.FormattingEnabled = true;
@@ -282,83 +360,6 @@
             comboBoxGenres.Name = "comboBoxGenres";
             comboBoxGenres.Size = new Size(180, 28);
             comboBoxGenres.TabIndex = 0;
-            // 
-            // txtTitle
-            // 
-            txtTitle.Location = new Point(335, 147);
-            txtTitle.Name = "txtTitle";
-            txtTitle.Size = new Size(176, 27);
-            txtTitle.TabIndex = 5;
-            // 
-            // txtPublishYear
-            // 
-            txtPublishYear.Location = new Point(335, 210);
-            txtPublishYear.Name = "txtPublishYear";
-            txtPublishYear.Size = new Size(176, 27);
-            txtPublishYear.TabIndex = 6;
-            // 
-            // txtPages
-            // 
-            txtPages.Location = new Point(335, 266);
-            txtPages.Name = "txtPages";
-            txtPages.Size = new Size(176, 27);
-            txtPages.TabIndex = 7;
-            // 
-            // checkIsAval
-            // 
-            checkIsAval.AutoSize = true;
-            checkIsAval.Location = new Point(338, 299);
-            checkIsAval.Name = "checkIsAval";
-            checkIsAval.Size = new Size(112, 24);
-            checkIsAval.TabIndex = 8;
-            checkIsAval.Text = "Is available?";
-            checkIsAval.UseVisualStyleBackColor = true;
-            // 
-            // btnAddBook
-            // 
-            btnAddBook.Location = new Point(335, 355);
-            btnAddBook.Name = "btnAddBook";
-            btnAddBook.Size = new Size(73, 34);
-            btnAddBook.TabIndex = 9;
-            btnAddBook.Text = "Add";
-            btnAddBook.UseVisualStyleBackColor = true;
-            btnAddBook.Click += btnAddBook_Click;
-            // 
-            // btnDelBook
-            // 
-            btnDelBook.Location = new Point(442, 355);
-            btnDelBook.Name = "btnDelBook";
-            btnDelBook.Size = new Size(73, 34);
-            btnDelBook.TabIndex = 11;
-            btnDelBook.Text = "Delete";
-            btnDelBook.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(338, 124);
-            label7.Name = "label7";
-            label7.Size = new Size(38, 20);
-            label7.TabIndex = 12;
-            label7.Text = "Title";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(339, 183);
-            label8.Name = "label8";
-            label8.Size = new Size(88, 20);
-            label8.TabIndex = 13;
-            label8.Text = "Publish year";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(338, 240);
-            label9.Name = "label9";
-            label9.Size = new Size(47, 20);
-            label9.TabIndex = 14;
-            label9.Text = "Pages";
             // 
             // Form1
             // 

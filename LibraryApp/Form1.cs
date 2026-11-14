@@ -197,7 +197,7 @@ namespace LibraryApp
                 txtPages.Focus();
                 return;
             }
-            if(comboBoxAuthors.SelectedValue is not int authorId||comboBoxGenres.SelectedValue is not int genreId)
+            if (comboBoxAuthors.SelectedValue is not int authorId || comboBoxGenres.SelectedValue is not int genreId)
             {
                 MessageBox.Show("Потрібно вибрати автора чи жанр!", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -205,12 +205,12 @@ namespace LibraryApp
             context.Books.Add(new Book
             {
                 Id = 0,
-                Title=title,
-                PublishYear=publishYear,
-                Pages=pages,
-                IsAvailable=checkIsAval.Checked,
-                AuthorId=authorId,
-                GenreId=genreId
+                Title = title,
+                PublishYear = publishYear,
+                Pages = pages,
+                IsAvailable = checkIsAval.Checked,
+                AuthorId = authorId,
+                GenreId = genreId
             });
             context.SaveChanges();
             txtFirtName.Clear();
@@ -218,6 +218,24 @@ namespace LibraryApp
             txtPublishYear.Clear();
             txtPages.Clear();
             checkIsAval.Checked = true;
+            LoadBooks();
+        }
+
+        private void btnDelBook_Click(object sender, EventArgs e)
+        {
+            if(listBoxBook.SelectedItem is not Book selected)
+            {
+                MessageBox.Show("Потрібно вибрати книгу у списку для виладення!", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            var book = context.Books.FirstOrDefault(b => b.Id == selected.Id);
+            if (book == null)
+            {
+                MessageBox.Show("Така книга відсутня у базі!", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            context.Books.Remove(book);
+            context.SaveChanges();
             LoadBooks();
         }
     }
